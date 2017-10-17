@@ -1648,7 +1648,7 @@ class AstReverter
             $code .= ' ' . $this->revertAST($node->children['expr']);
         }
 
-        return $code;
+        return $code . ';';
     }
 
     private function shellExec(Node $node) : string
